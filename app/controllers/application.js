@@ -4,6 +4,8 @@ import THREE from 'three';
 var reverse = true;
 
 export default Controller.Controller.extend({
+
+
   scene: new THREE.Scene(),
   camera: new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,1,500),
   renderer:  new THREE.WebGLRenderer(),

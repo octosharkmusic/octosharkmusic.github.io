@@ -22,15 +22,16 @@ module.exports = function(environment) {
       // when it is created
     },
 
-    // FIREBASE CONFIG
-    // firebase: {
-    //   apiKey: "xyz",
-    //   authDomain: "YOUR-FIREBASE-APP.firebaseapp.com",
-    //   databaseURL: "https://YOUR-FIREBASE-APP.firebaseio.com",
-    //   projectId: "YOUR-FIREBASE-APP",
-    //   storageBucket: "YOUR-FIREBASE-APP.appspot.com",
-    //   messagingSenderId: "00000000000"
-    // }
+    //FIREBASE CONFIG
+    firebase: {
+      apiKey: "AIzaSyBw1JTaGDvDj5Y7cN3z1uQCMRhAFF_nsgA",
+      authDomain: "octosharkmusic.firebaseapp.com",
+      databaseURL: "https://octosharkmusic.firebaseio.com",
+      projectId: "octosharkmusic",
+      storageBucket: "octosharkmusic.appspot.com",
+      messagingSenderId: "213246422952",
+      appId: "1:213246422952:web:f81a6d725aaa31c0fcf79d"
+    }
   };
 
   if (environment === 'development') {
