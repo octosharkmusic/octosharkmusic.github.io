@@ -6,6 +6,16 @@ module.exports = function(environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
+    //FIREBASE CONFIG
+    firebase: {
+      apiKey: "AIzaSyBw1JTaGDvDj5Y7cN3z1uQCMRhAFF_nsgA",
+      authDomain: "octosharkmusic.firebaseapp.com",
+      databaseURL: "https://octosharkmusic.firebaseio.com",
+      projectId: "octosharkmusic",
+      storageBucket: "octosharkmusic.appspot.com",
+      messagingSenderId: "213246422952",
+      appId: "1:213246422952:web:f81a6d725aaa31c0fcf79d"
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -21,17 +31,6 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
-
-    //FIREBASE CONFIG
-    firebase: {
-      apiKey: "AIzaSyBw1JTaGDvDj5Y7cN3z1uQCMRhAFF_nsgA",
-      authDomain: "octosharkmusic.firebaseapp.com",
-      databaseURL: "https://octosharkmusic.firebaseio.com",
-      projectId: "octosharkmusic",
-      storageBucket: "octosharkmusic.appspot.com",
-      messagingSenderId: "213246422952",
-      appId: "1:213246422952:web:f81a6d725aaa31c0fcf79d"
-    }
   };
 
   if (environment === 'development') {

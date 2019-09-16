@@ -11,11 +11,11 @@ export default Controller.Controller.extend({
   renderer:  new THREE.WebGLRenderer(),
 
   init: function() {
-    this._super(...arguments);
-      this.renderer.setSize(window.innerWidth, window.innerHeight);
-      document.body.appendChild(this.renderer.domElement);
-      this.renderPreloader();
-  },
+      this._super(...arguments);
+        this.renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(this.renderer.domElement);
+        this.renderPreloader();
+    },
   renderPreloader:function() {
     var geometry = new THREE.BoxGeometry( 1, 1, 1 );
     var loader = new THREE.TextureLoader();

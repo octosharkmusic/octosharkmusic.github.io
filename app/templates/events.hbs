@@ -1,1 +1,7 @@
-<div>{{events}}</div>
+{{#each model as |events|}}
+    <div>{{events.name}}</div>
+    <div>{{events.date}}</div>
+    <div>{{events.description}}</div>
+    <div>{{events.locationName}}</div>
+    <div>{{events.image}}</div>
+{{/each}}
