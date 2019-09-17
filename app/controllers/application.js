@@ -17,14 +17,19 @@ export default Controller.Controller.extend({
         this.renderPreloader();
     },
   renderPreloader:function() {
-    var geometry = new THREE.BoxGeometry( 1, 1, 1 );
+    var geometry1 = new THREE.BoxGeometry( 1, 1, 1 );
+    var geometry2 = new THREE.BoxGeometry( 2, 2, 2 );
     var loader = new THREE.TextureLoader();
-    var clothTexture = loader.load( '/assets/images/octoshark-logo-black.png' );
-    var clothMaterial = new THREE.MeshBasicMaterial({ map: clothTexture });
-    var cube = new THREE.Mesh(geometry,clothMaterial);
-    this.scene.add(cube);
-    this.camera.position.set(2,2,2);
-    this.camera.lookAt(cube.position);
+    var clothTexture1 = loader.load( '/assets/images/octoshark-logo-black.png' );
+    var clothTexture2 = loader.load( '/assets/images/tribunion-01-2020.jpg' );
+    var clothMaterial1 = new THREE.MeshBasicMaterial({ map: clothTexture1 });
+    var clothMaterial2 = new THREE.MeshBasicMaterial({ map: clothTexture2 });
+    var cube1 = new THREE.Mesh(geometry1,clothMaterial1);
+    var cube2 = new THREE.Mesh(geometry2,clothMaterial2);
+    cube2.position.set(3,3,3)
+    this.scene.add(cube1,cube2);
+    this.camera.position.set(2,2,6);
+    this.camera.lookAt(cube1.position);
     this.renderer.render(this.scene,this.camera);
     this.renderLoop();
   },
@@ -46,5 +51,5 @@ export default Controller.Controller.extend({
       this.camera.rotation.y -= 0.006;
     }
     this.renderer.render(this.scene,this.camera);
-  }
+  },
 });
